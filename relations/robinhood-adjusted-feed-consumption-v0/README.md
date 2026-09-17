@@ -179,44 +179,88 @@ wrong killers or broken positive controls fail the runner; they are never kills.
 No production runtime mutation mode exists. Mutation receipts include source
 digests and per-mutant observations. The suite itself tests these rejection rules.
 
-## Read-only Fede reference; compatibility is not final
+## Read-only Fede reference; hardened guard compatibility
 
-Inspected repository `babyblueviper1/semantic-execution-guard`, branch
-`guard/robinhood-semantic-execution-guard-v0`, exact commit
-`8dc4f920bfbebf3531d6ebdbfcc3f16c154b5d04`, parent
-`8c786d8134632cdb4892ed32051377e739495300`.
+Repository: `babyblueviper1/semantic-execution-guard`, branch
+`guard/robinhood-semantic-execution-guard-v0`.
 
-That draft is an implementation reference, **not normative authority for this
-profile**, not accepted for live deployment and not repaired by this work.
-See its [contract](https://github.com/babyblueviper1/semantic-execution-guard/blob/8dc4f920bfbebf3531d6ebdbfcc3f16c154b5d04/contracts/SemanticExecutionGuard.sol)
-and unchanged [handoff acceptance condition](https://github.com/babyblueviper1/semantic-execution-guard/blob/8dc4f920bfbebf3531d6ebdbfcc3f16c154b5d04/docs/fede-handoff.md#L34-L39).
+- First audited draft: `8dc4f920bfbebf3531d6ebdbfcc3f16c154b5d04`, based on
+  `8c786d8134632cdb4892ed32051377e739495300`. The original compatibility mapping
+  recorded its registration/timestamp defects, undefined notional units and
+  execution-name/price-only scope mismatch.
+- Current compatibility target, hardened regression-audited draft:
+  `686d9247451d68c6910c2e6bae79664cb763b33f`, exactly one commit after that draft.
+  See the pinned [contract](https://github.com/babyblueviper1/semantic-execution-guard/blob/686d9247451d68c6910c2e6bae79664cb763b33f/contracts/SemanticExecutionGuard.sol)
+  and [tests](https://github.com/babyblueviper1/semantic-execution-guard/blob/686d9247451d68c6910c2e6bae79664cb763b33f/test/SemanticExecutionGuard.t.sol).
 
-| Relation/design requirement | Behavior at that exact guard SHA | Status |
+The independent regression audit on 2026-09-17 classified this exact hardened
+commit as **READY FOR TESTNET PRICE-ESTABLISHMENT PROTOTYPE**. This does **not**
+establish live Robinhood deployment, actual live feed identity, actual Stock
+Token/feed association, live round correctness, protected-action execution,
+transaction settlement or economic safety. Price-establishment prototype readiness
+is not end-to-end protected-action readiness.
+
+That audit freshly observed 14/14 repository Solidity tests and 20/20 independent
+probes passing. The same four hardening assertions failed against the old exact
+contract for the expected reasons, including its future-time Panic(0x11).
+Registration and timestamp repairs, removal of undefined notional arithmetic, and
+the renamed price-only claim boundary were verified; no new code regression was
+reproduced. These are recorded external audit results, not Solidity test counts for
+this Pavlo branch. The guard remains an implementation reference, **not normative
+authority for this profile**; this documentation change does not repair its code.
+
+| Relation/design requirement | Behavior at 686d9247451d68c6910c2e6bae79664cb763b33f | Status |
 | --- | --- | --- |
-| Raw quote cannot establish executable price; no external execution-price argument | executeAtOraclePrice takes assetId/amount only and reads registered feed; owner configuration remains trust root | MATCH |
-| Established nonzero contract feed binding | Mapping binds nonzero entries once, but zero/noncontract registrations are accepted; zero can be registered again | PENDING_HARDENING |
-| Full asset/chain/token/state coordinates | Guard uses opaque bytes32 assetId; normalized tuple/state binding requires an agreed adapter/domain mapping | MISMATCH |
-| Positive answer | Rejects answer <= 0 | MATCH |
-| Complete round | Rejects answeredInRound < roundId; zero IDs not separately banned | MATCH |
-| Freshness bound for positive nonfuture timestamp | Uses age > maxStalenessSeconds; exact boundary passes | MATCH |
-| Explicit future timestamp rejection before subtraction | Subtraction panics with 0x11; no controlled future-time error | PENDING_HARDENING |
-| Explicit zero timestamp rejection | No explicit check; zero can pass an age window covering zero | PENDING_HARDENING |
-| No second multiplier | Consumes feed answer directly | MATCH |
-| Native scale carried into price result | Getter/event return feed decimals; this profile additionally compares supplied context scale | MATCH |
-| Explicit feed identity in receipt | Event omits feed address; successful nonzero mapping is reconstructable from guard identity/code and binding evidence; formats differ | MISMATCH |
-| Defined amount/notional units | Guard returns amountTokens * answer without established token scale; this profile returns price only | OUT_OF_SCOPE |
-| Protected action acceptance | Guard reads/calculates/emits; successful protected state transition remains pending | OUT_OF_SCOPE |
+| OFFCHAIN_UNDERLYING_EQUITY_QUOTE cannot enter executable price path | Price comes from the registered feed read, not a caller's raw quote; owner configuration remains the trust root | MATCH |
+| No external price argument | establishExecutablePrice(bytes32 assetId) accepts only assetId; no alternative public price-input route | MATCH |
+| Registered feed is the consumed feed | getExecutablePrice reads latestRoundData from feedOf[assetId]; successful binding cannot be replaced | MATCH |
+| Zero feed rejected | registerFeed reverts ZeroFeedAddress before writing state | MATCH |
+| Non-contract feed rejected | registerFeed reverts FeedNotAContract when code.length is zero | MATCH |
+| Asset selection has no fallback | Unregistered assetId reverts UnknownAsset; other assets' feeds are not substituted | MATCH |
+| Positive answer required | Rejects answer <= 0 with NonPositiveAnswer | MATCH |
+| answeredInRound >= roundId | Rejects an incomplete round; no separate universal zero-round ban | MATCH |
+| updatedAt > 0 | Rejects zero with ZeroUpdatedAt before subtraction | MATCH |
+| updatedAt <= current block time | Rejects future time with FutureUpdatedAt before subtraction, not Panic(0x11) | MATCH |
+| Inclusive freshness boundary | Age == maxStalenessSeconds passes; one second beyond reverts StaleAnswer | MATCH |
+| Direct consumption of native feed value | Returns the feed answer unchanged | MATCH |
+| No second multiplier | No shares-per-token transformation is performed | MATCH |
+| Feed decimals returned/preserved | Getter, establishment result and event carry native feedDecimals | MATCH |
+| Explicit normalized chain/profile/token coordinates | Opaque bytes32 assetId and local guard context do not implement this profile's explicit normalized coordinates | MISMATCH |
+| Explicit evidence/context state identity | No comparison of the profile's evidence and context state IDs | MISMATCH |
+| Expected-decimal comparison against configured semantic scale | Returns feed decimals but has no configured expected-scale comparison | MISMATCH |
+| Genuine Chainlink / Robinhood / adjusted / USD semantics | Owner-selected contract and code-presence check do not independently establish these claims | LIVE-EVIDENCE-PENDING |
+| Explicit feed identity in the profile receipt | Event omits feed; reconstructable through guard address + assetId + immutable feedOf[assetId], with chain provenance | MISMATCH |
+| Defined amount/notional units | Undefined amount-scaled arithmetic was removed; both routes now expose price only, with no amount input | OUT_OF_SCOPE |
+| Protected-action authorization/execution | Establishes and receipts a price; no trade, transfer, settlement or protected state transition | OUT_OF_SCOPE |
 
-MATCH describes the narrow source behavior, not live correctness or full interface
-compatibility. The offline evaluator accepts declared evidence mantissas; it is not
-itself a Solidity no-price-argument admission API. A future trusted adapter or guard
-must establish where the evidence came from.
+MATCH describes narrow semantic behavior, not live authenticity or full interface
+compatibility. MISMATCH records differences from the profile's richer coordinate
+model or receipt format; it is not automatically a contract bug or a requirement
+to expand this limited testnet price-establishment prototype. The offline evaluator
+accepts declared evidence mantissas; it is not itself a Solidity no-price-argument
+admission API. Authentic source/state acquisition and agreed normalized mappings
+remain integration work.
 
 The receipt mismatch does not automatically require duplicating a feed field in
-Solidity: reconstructable immutable binding and self-contained receipt are distinct
-design choices. Actual execution, amount units, replay requirements and trusted
-source/state acquisition remain separate Fede/Tiago acceptance work. No Solidity
-was copied and no guard repair or deployment is claimed.
+Solidity: reconstructable immutable binding and a self-contained feed-identity
+receipt are distinct choices. Code presence and immutable registration do not prove
+interface correctness, economic asset identity or immutable proxy implementation.
+An earlier price receipt alone does not authorize a later protected action.
+
+Fede 686d924 maps to this **NEW direct-feed route**, not the frozen raw quote plus
+multiplier conversion route. It does not execute that old relation and applies no
+second multiplier. Neither profile supersedes or reinterprets the other.
+
+External documentation caveats at that pinned Fede commit: its
+[README](https://github.com/babyblueviper1/semantic-execution-guard/blob/686d9247451d68c6910c2e6bae79664cb763b33f/contracts/README.md)
+still references the old conversion handoff and a pending control-path state change;
+that latter acceptance condition belongs to a future protected-action integration.
+Its inherited numeric-comparator rationale must not be read as proving that a
+simple equality comparator necessarily fails open when values diverge. This
+profile's claim is narrower: **numeric equality does not establish source
+authority**. Acceptance/rejection must depend on evidence provenance, claim type
+and registered authority, not merely matching numbers. Fede's repository was not
+edited, and no Solidity was copied into this profile.
 
 ## Official sources observed during this task
 
@@ -273,7 +317,8 @@ documentation, REST, RPC, Chainlink or Blockscout.
 
 This branch is based on Pavlo's relation SHA, not Fede's fork: it contains no
 Solidity guard and has zero Solidity tests. A successful empty Foundry run is not
-guard validation. No real Robinhood API response/round, testnet success, Fede repair,
-Tiago deployment, Blockscout verification, protected action or production economic
-correctness is established by this work. Local implementation is not publication,
-merge, deployment or independent verification by another author.
+guard validation. The separately audited repairs in Fede's pinned hardened commit
+are documented above, not implemented here. No real Robinhood API response/round,
+testnet success, Tiago deployment, Blockscout verification, protected action or
+production economic correctness is established by this profile. Its publication
+does not establish merge, deployment or independent verification by another author.
