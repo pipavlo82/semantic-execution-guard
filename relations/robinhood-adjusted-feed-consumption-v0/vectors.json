@@ -1,0 +1,2432 @@
+[
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L1_CONTROL_REGISTERED_FRESH_ADJUSTED_FEED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L1_CONTROL_REGISTERED_FRESH_ADJUSTED_FEED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": "1543125",
+      "decimals": 4,
+      "consumption_operation": "DIRECT",
+      "relation_status": "PASS",
+      "reason_code": "DIRECT_ADJUSTED_FEED_ESTABLISHED",
+      "explicit_boundary_hit": false,
+      "input_digest": "0xa13650be20cab116b644db45a76604fb1ad8376b4d2e06b51624cd6afe63652f"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L2_RAW_QUOTE_NUMERIC_COINCIDENCE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "OFFCHAIN_UNDERLYING_EQUITY_QUOTE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+        "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+        "feed_address": null,
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L2_RAW_QUOTE_NUMERIC_COINCIDENCE",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "OFFCHAIN_UNDERLYING_EQUITY_QUOTE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+      "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+      "feed_address": null,
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "RAW_QUOTE_DOES_NOT_ESTABLISH_EXECUTABLE_PRICE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xd102fcfd1c2863fea6a206e5805bf1da942a8f56eaeb724195e81bf9c38f7eae"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L3_RAW_QUOTE_DIFFERENT_VALUE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "OFFCHAIN_UNDERLYING_EQUITY_QUOTE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+        "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+        "feed_address": null,
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1234500",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L3_RAW_QUOTE_DIFFERENT_VALUE",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "OFFCHAIN_UNDERLYING_EQUITY_QUOTE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+      "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+      "feed_address": null,
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1234500",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "RAW_QUOTE_DOES_NOT_ESTABLISH_EXECUTABLE_PRICE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x5c65ee5e2ef28d2289465dfd6b15ecd17b45807465b7b7eb38d619f900d123a4"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L4_WRONG_FEED_FOR_ASSET",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L4_WRONG_FEED_FOR_ASSET",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "FEED_BINDING_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x2bf0e141c0c2e3adfafedf9aab7ae40c8219bab0ce64fb56b58be2f3f55d0b21"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L5_MISSING_REGISTERED_FEED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": null,
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L5_MISSING_REGISTERED_FEED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": null,
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "CANNOT_ESTABLISH",
+      "reason_code": "MISSING_REGISTERED_FEED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xde77dd9922728228373e4082377cbf0f35e7747f265378826fd95109bfb45e81"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L6_WRONG_ASSET_BINDING",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-B",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L6_WRONG_ASSET_BINDING",
+      "asset_id": "synthetic:stock-token-B",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "ASSET_IDENTITY_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x7dc7448b53663130979070a800f201d07adebc3302a40912dbdf63d03024f4fe"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L7_WRONG_CHAIN",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31338",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L7_WRONG_CHAIN",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31338",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "CHAIN_IDENTITY_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x370c415bfe5db4910131422653e3ae7455d4be8829643109b60c0c84c88415d5"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L8_STALE_FEED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 800
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L8_STALE_FEED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 800,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "STALE_FEED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xb7572dbcfc38fb03cff7f4450e3f071b9c998cbbab103865e8680b92165fad9e"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L9_FUTURE_TIMESTAMP",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 1001
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L9_FUTURE_TIMESTAMP",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 1001,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "FUTURE_TIMESTAMP",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xb748d7c6636b76e1a1742ada50e5565dae0042d6c94ebf475b461d0707ae22a5"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L10_ZERO_TIMESTAMP",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 0
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 1000,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L10_ZERO_TIMESTAMP",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 0,
+      "execution_time": 1000,
+      "max_staleness_seconds": 1000,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "ZERO_TIMESTAMP",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xec8f56eba5f77024cb3517a3a2493147b7baf2c2b2ff10db68b90837384e7664"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L11_INCOMPLETE_ROUND",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "9",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L11_INCOMPLETE_ROUND",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "9",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "INCOMPLETE_ROUND",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x7abecdd279de7e19078ce1afe7e60d61b19434e49d57630f5e24a96fd0f261bb"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L12_NONPOSITIVE_PRICE_ZERO",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "0",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L12_NONPOSITIVE_PRICE_ZERO",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "0",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "NONPOSITIVE_PRICE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x851bd96f0086ee4bd0370e588b5ce86c73642246beb9e232b40b1b7abf22ff0b"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L13_NONPOSITIVE_PRICE_NEGATIVE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "-1",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L13_NONPOSITIVE_PRICE_NEGATIVE",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "-1",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "NONPOSITIVE_PRICE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x421dcda71c394cf2027cf072d49732491b85c4c82e6ca0e5713ec4bb61b0e726"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L14_DOUBLE_ADJUSTMENT",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "APPLY_MULTIPLIER"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L14_DOUBLE_ADJUSTMENT",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "APPLY_MULTIPLIER",
+      "relation_status": "FAIL",
+      "reason_code": "DOUBLE_ADJUSTMENT",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x6cf096d5ec5f3549565608fdfbb70e8959c809038e68cf83f2aa0198c8c3b2cc"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L15_FRESHNESS_BOUNDARY_EXACT",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 900
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L15_FRESHNESS_BOUNDARY_EXACT",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 900,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": "1543125",
+      "decimals": 4,
+      "consumption_operation": "DIRECT",
+      "relation_status": "PASS",
+      "reason_code": "DIRECT_ADJUSTED_FEED_ESTABLISHED",
+      "explicit_boundary_hit": false,
+      "input_digest": "0xcf288ba0979cadc3c356e9702c562a20798b96abeb92e584f1e312af7ee74177"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L16_FRESHNESS_BOUNDARY_ONE_PAST",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 899
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L16_FRESHNESS_BOUNDARY_ONE_PAST",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 899,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "STALE_FEED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xdfbdb4506dd03b391670f0795dea4372d2ee8eff6c47ed3501e7b8a1151c5a21"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L17_SOURCE_AUTHORITY_SUBSTITUTION",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+        "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L17_SOURCE_AUTHORITY_SUBSTITUTION",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "OFFCHAIN_STOCK_TOKEN_API_RAW_QUOTE",
+      "authority_class": "DECLARED_OFFCHAIN_QUOTE",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "SOURCE_AUTHORITY_SUBSTITUTION",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xfe519b5bd81cf4f4e6047fccb3a24b2a110d8c39783da5238f9039a5e1adb80f"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L18_REQUESTED_CLAIM_SUBSTITUTION",
+      "requested_claim_type": "EXECUTION_AUTHORIZED",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L18_REQUESTED_CLAIM_SUBSTITUTION",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTION_AUTHORIZED",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "REQUESTED_CLAIM_TYPE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xb93056c28453aef6fd4cff3a84fdc3e133e8218013505533dc87cf28f05a4a12"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L19_WRONG_TOKEN_CONTRACT",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L19_WRONG_TOKEN_CONTRACT",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "TOKEN_IDENTITY_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x20e22f7d836e88f09fadf6314d79fbe90d2301382a255b8061d3636e3ed9f78d"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L20_ZERO_REGISTERED_FEED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0x0000000000000000000000000000000000000000",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0x0000000000000000000000000000000000000000",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L20_ZERO_REGISTERED_FEED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0x0000000000000000000000000000000000000000",
+      "registered_feed": "0x0000000000000000000000000000000000000000",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "ZERO_REGISTERED_FEED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xbf90ec372cca40c5aa15b5bcc8b3b1e7e3180e95ad76da419932b893e64bebfb"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L21_MISSING_EVIDENCE_FEED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": null,
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L21_MISSING_EVIDENCE_FEED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": null,
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "CANNOT_ESTABLISH",
+      "reason_code": "MISSING_EVIDENCE_FEED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x31540c0ce673577161c6f366049b5e365e4799bb93a75221d878148992307f9c"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L22_FEED_HAS_NO_CODE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": false,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L22_FEED_HAS_NO_CODE",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": false,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "FEED_HAS_NO_CODE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x74fda3da64d09b57c606592dfedb6ac28979997bf94f98583045a06b7ba0f41b"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L23_FEED_CODE_UNESTABLISHED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": null,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L23_FEED_CODE_UNESTABLISHED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": null,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "CANNOT_ESTABLISH",
+      "reason_code": "FEED_CODE_UNESTABLISHED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x2033fc1c21d9f5252c37290a3b2642dc2c074aaaec504b43f6df3ce0060a6305"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L24_FEED_DECIMALS_MISMATCH",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 8,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L24_FEED_DECIMALS_MISMATCH",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 8,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "FEED_DECIMALS_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x280c525b4391deb4901ade27c110568457263091690c14be433e7aa96a8fd111"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L25_CURRENCY_MISMATCH",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "EUR",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L25_CURRENCY_MISMATCH",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "EUR",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "CURRENCY_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xe580a42f7f80a6b60490e8d5a1ebeb0e67faf8d0ea84175d825d380bf470cec7"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L26_STATE_IDENTITY_MISMATCH",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-99",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L26_STATE_IDENTITY_MISMATCH",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-99",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "STATE_IDENTITY_MISMATCH",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x7b08ed6abbec68d2904351d2552d53104ff50197ae4e5dd8fb932159fa80d3e6"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L27_STATE_IDENTITY_UNESTABLISHED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": null,
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L27_STATE_IDENTITY_UNESTABLISHED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": null,
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "CANNOT_ESTABLISH",
+      "reason_code": "STATE_IDENTITY_UNESTABLISHED",
+      "explicit_boundary_hit": true,
+      "input_digest": "0xfab554aeca07bcb13a3a4ea46c6d17ceedf26e1aa71e245a41b1946991b4eedc"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L28_ZERO_ROUND_IDS_SUPPORTED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "0",
+        "answered_in_round": "0",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L28_ZERO_ROUND_IDS_SUPPORTED",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "0",
+      "answered_in_round": "0",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": "1543125",
+      "decimals": 4,
+      "consumption_operation": "DIRECT",
+      "relation_status": "PASS",
+      "reason_code": "DIRECT_ADJUSTED_FEED_ESTABLISHED",
+      "explicit_boundary_hit": false,
+      "input_digest": "0xf9c42e20ec6bb05ad791539149035eae70518baebfae3855db2cfab6faf1c55f"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L29_ZERO_FRESHNESS_WINDOW_CURRENT_OBSERVATION",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 1000
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 0,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L29_ZERO_FRESHNESS_WINDOW_CURRENT_OBSERVATION",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "ALREADY_ADJUSTED_ONCHAIN_PRICE",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 1000,
+      "execution_time": 1000,
+      "max_staleness_seconds": 0,
+      "value": "1543125",
+      "decimals": 4,
+      "consumption_operation": "DIRECT",
+      "relation_status": "PASS",
+      "reason_code": "DIRECT_ADJUSTED_FEED_ESTABLISHED",
+      "explicit_boundary_hit": false,
+      "input_digest": "0xaa1afe42c0fe1ae48251d42152b850dd46f05f0b660fab47fa9e387fd5ea41d5"
+    }
+  },
+  {
+    "input": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L30_UNRELATED_INPUT_CLAIM",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "evidence": {
+        "claim_type": "EXECUTION_AUTHORIZED",
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+        "state_id": "synthetic:block-state-100",
+        "currency": "USD",
+        "mantissa": "1543125",
+        "decimals": 4,
+        "round_id": "10",
+        "answered_in_round": "10",
+        "updated_at": 990
+      },
+      "context": {
+        "asset": {
+          "asset_id": "synthetic:stock-token-A",
+          "chain_id": "31337",
+          "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+        "feed_code_present": true,
+        "state_id": "synthetic:block-state-100",
+        "execution_time": 1000,
+        "max_staleness_seconds": 100,
+        "currency": "USD",
+        "feed_decimals": 4,
+        "expected_source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+        "expected_authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+        "comparison_adjusted_price": {
+          "mantissa": "1543125",
+          "decimals": 4
+        }
+      },
+      "consumption": {
+        "operation": "DIRECT"
+      }
+    },
+    "expected": {
+      "relation_profile_id": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0",
+      "fixture_kind": "SYNTHETIC_RELATION_FIXTURE",
+      "case_id": "L30_UNRELATED_INPUT_CLAIM",
+      "asset_id": "synthetic:stock-token-A",
+      "chain_id": "31337",
+      "contract_address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "input_claim_type": "EXECUTION_AUTHORIZED",
+      "requested_claim_type": "EXECUTABLE_TOKEN_PRICE",
+      "source_surface": "REGISTERED_ONCHAIN_ADJUSTED_FEED",
+      "authority_class": "DECLARED_REGISTERED_ADJUSTED_FEED",
+      "feed_address": "0xffffffffffffffffffffffffffffffffffffffff",
+      "registered_feed": "0xffffffffffffffffffffffffffffffffffffffff",
+      "feed_code_present": true,
+      "state_id": "synthetic:block-state-100",
+      "expected_state_id": "synthetic:block-state-100",
+      "currency": "USD",
+      "input_value": "1543125",
+      "input_decimals": 4,
+      "round_id": "10",
+      "answered_in_round": "10",
+      "updated_at": 990,
+      "execution_time": 1000,
+      "max_staleness_seconds": 100,
+      "value": null,
+      "decimals": null,
+      "consumption_operation": "DIRECT",
+      "relation_status": "FAIL",
+      "reason_code": "INPUT_CLAIM_TYPE",
+      "explicit_boundary_hit": true,
+      "input_digest": "0x26415fe2a17c9ec6b71039f128239c8c1543849f4ba97d2dadbfd70862c6a6c3"
+    }
+  }
+]
