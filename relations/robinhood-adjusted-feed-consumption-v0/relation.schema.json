@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/pipavlo82/semantic-execution-guard/relations/robinhood-adjusted-feed-consumption-v0/relation.schema.json",
+  "title": "Synthetic direct adjusted-feed consumption input v0",
+  "description": "Declared coordinates only. Not a live feed wire schema, authentication proof or execution authorization.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "relation_profile_id",
+    "fixture_kind",
+    "case_id",
+    "requested_claim_type",
+    "evidence",
+    "context",
+    "consumption"
+  ],
+  "properties": {
+    "relation_profile_id": {
+      "const": "semantic-execution-guard.robinhood-adjusted-feed-consumption.v0"
+    },
+    "fixture_kind": {
+      "const": "SYNTHETIC_RELATION_FIXTURE"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "requested_claim_type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_type",
+        "asset",
+        "source_surface",
+        "authority_class",
+        "feed_address",
+        "state_id",
+        "currency",
+        "mantissa",
+        "decimals",
+        "round_id",
+        "answered_in_round",
+        "updated_at"
+      ],
+      "properties": {
+        "claim_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "asset": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "asset_id",
+            "chain_id",
+            "contract_address"
+          ],
+          "properties": {
+            "asset_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "chain_id": {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,19}$"
+            },
+            "contract_address": {
+              "type": "string",
+              "pattern": "^0x[0-9a-f]{40}$"
+            }
+          }
+        },
+        "source_surface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "authority_class": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "feed_address": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^0x[0-9a-f]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "mantissa": {
+          "type": "string",
+          "pattern": "^(0|-?[1-9][0-9]*)$",
+          "maxLength": 79
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "round_id": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 25
+        },
+        "answered_in_round": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 25
+        },
+        "updated_at": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset",
+        "registered_feed",
+        "feed_code_present",
+        "state_id",
+        "execution_time",
+        "max_staleness_seconds",
+        "currency",
+        "feed_decimals",
+        "expected_source_surface",
+        "expected_authority_class",
+        "comparison_adjusted_price"
+      ],
+      "properties": {
+        "asset": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "asset_id",
+            "chain_id",
+            "contract_address"
+          ],
+          "properties": {
+            "asset_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "chain_id": {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,19}$"
+            },
+            "contract_address": {
+              "type": "string",
+              "pattern": "^0x[0-9a-f]{40}$"
+            }
+          }
+        },
+        "registered_feed": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^0x[0-9a-f]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "feed_code_present": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "state_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_time": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "max_staleness_seconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "feed_decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "expected_source_surface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "expected_authority_class": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "comparison_adjusted_price": {
+          "description": "Non-authorizing numeric reference for adversarial coincidence fixtures. The production evaluator never compares price values against this field.",
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "mantissa",
+                "decimals"
+              ],
+              "properties": {
+                "mantissa": {
+                  "type": "string",
+                  "pattern": "^(0|-?[1-9][0-9]*)$",
+                  "maxLength": 79
+                },
+                "decimals": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 255
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "consumption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operation"
+      ],
+      "properties": {
+        "operation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    }
+  }
+}
